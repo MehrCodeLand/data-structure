@@ -12,7 +12,9 @@ namespace data_structure_V1.Classes
         {
             int[] nums = { 2, 1, 23, 11, -100, 5 };
 
-            Algo.InsertionSort(nums);
+            var result = Algo.BinrayConvert(21);
+
+
         } 
     }
 
@@ -38,6 +40,24 @@ namespace data_structure_V1.Classes
 
                 nums[j + 1] = key;
             }
+        }
+
+        // O(n)
+        public static int BinrayConvert(int number)
+        {
+            var sum = 0;
+
+            while(number > 0)
+            {
+                int r = number % 2;
+
+                sum = sum * 10 + r;
+                number /= 2;
+
+                
+            }
+
+            return sum;
         }
     }
 }
